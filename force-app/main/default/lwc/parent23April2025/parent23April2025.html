@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent Component 23 April 2025" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter a value to send on Child" name="parentProperty" value={parentProperty} onchange={handleChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <p> Parent Property: {parentProperty} </p>
+        </div>
+    </lightning-card>
+        <p> Parent property sending to Child: {parentProperty} </p>
+        <c-child23-april-2025 parent-property={parentProperty}> </c-child23-april-2025>
+        <p> Parent property sending to Grand Child: {parentProperty} </p>
+        <c-grand-child25-april-2025 parent-property={parentProperty}> </c-grand-child25-april-2025>
+        <p> Parent property sending to Grand Child: {parentProperty} </p>
+    
+       
+    <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+ </template>

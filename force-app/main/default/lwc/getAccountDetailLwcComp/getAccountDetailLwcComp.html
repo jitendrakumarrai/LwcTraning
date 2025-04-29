@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  variant="Brand"  title="Account org details 15 Dec23" icon-name="standard:account">
+        <lightning-input type="text" variant="standard" name="name" label="Serach Account" placeholder="type account name here..."
+        onchange={onChangeHandlerMethod}>
+
+        </lightning-input>
+        
+
+        <div class="slds-m-around_medium">
+            <template if:true={accList.data}>
+                <template for:each={accList.data} for:item="account">
+                    <p key={account.Id}>{account.Name}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

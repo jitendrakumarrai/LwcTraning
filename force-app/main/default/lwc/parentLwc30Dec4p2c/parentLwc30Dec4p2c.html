@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Parent LWC 30Dec for Parent to Child component communicatio "
+                    icon-name="custom:custom1">
+
+            <lightning-input 
+                            class="slds-p-horizontal_small"
+                            title="StartCounter"
+                            type="number"
+                            min="0"
+                            max="1000000"
+                            value={parentCounterValue}
+                            onchange={handlerChnageStartCounter}
+            ></lightning-input>
+            <lightning-button 
+                              label="Add count 100 "
+                              onclick={handelMaximizeClick}
+                                >
+
+            </lightning-button>
+
+            <!-- Child component calling-->
+    <c-child-lwc30-dec4p2c childcountervalue ={parentCounterValue}></c-child-lwc30-dec4p2c> 
+
+    </lightning-card >
+    
+</template>

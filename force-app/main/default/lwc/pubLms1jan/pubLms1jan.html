@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Publish COMPONENT  LMS " icon-name="standard:account">
+        <!-- Increamental 10 button -->
+            <lightning-button 
+                            class="slds-p-horizontal_medium"
+                            label="Add+10"
+                            variant="brand"
+                            onclick={handaleIncreament}
+                            >
+            </lightning-button>
+             <!-- Decreamental 10 button -->
+            <lightning-button 
+            class="slds-p-horizontal_medium"
+            label="Subtract-10"
+            variant="nuetral"
+            onclick={handaleDecreamental}
+            >
+            </lightning-button>
+            <!-- Multiplication button-->
+            <lightning-button 
+            class="slds-p-horizontal_medium"
+            label="Multiply * 10"
+            variant="brand"
+            onclick={handaleMultiplication}
+            >
+            </lightning-button>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+     <template for:each={wiredAccountsList.data} for:item="acc">
+          <p key={acc.id}>
+               {acc.Name}
+          </p>
+          </template>
+   <lightning-card title="Search Account and contacts details... on 24 Dec" icon-name="custom:custom1">
+        <lightning-input label="Search Account or Contact " name="searchValue" onchange={changeHandler}  icon-name ="custom:custom2" placeholder="Search account or Contact">
+        </lightning-input >
+      <!-- submit -->
+        <lightning-button class="slds-var-p-right_medium" variant="brand" type="submit" label="Submit"  onclick={clickHandler}></lightning-button>
+        <!-- Canclel button -->
+        <lightning-button  type="cancel" variant="nuetral" label="Cancel" ></lightning-button>
+            
+   </lightning-card>
+
+</template>

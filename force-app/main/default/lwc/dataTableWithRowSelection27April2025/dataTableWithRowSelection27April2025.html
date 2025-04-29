@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Data Table with Row Selection 27 April 2025" icon-name="custom:custom63">
+        
+        <lightning-button variant="brand" label={buttonLebel} onclick={handleShowContact}></lightning-button>
+    </lightning-card>
+    <template if:true={isDataTableVisible}>
+        <lightning-input type="Search" label="Search" value={searchKey} onchange={handleSearchKeyChange}></lightning-input>
+            <lightning-card title="Account contacts list" icon-name="custom:custom63">
+            <lightning-datatable  data={contDataList} 
+                columns={contListDataColumns} key-field="Id" onrowselection={handleSelectionRow} >
+            </lightning-datatable>
+        </lightning-card>
+    </template>
+        
+       
+</template>

@@ -1,0 +1,28 @@
+<template>
+   
+
+
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+    </div> 
+
+
+    <lightning-card  variant="Narrow"  title="Hariom Account Industry Details " icon-name="custom:custom15">
+        
+        <lightning-combobox
+            name="progress"
+            label="Industry"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+
+    </lightning-card>
+</template>

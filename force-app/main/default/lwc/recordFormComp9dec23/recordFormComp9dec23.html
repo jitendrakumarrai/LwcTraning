@@ -1,0 +1,27 @@
+<template>
+<lightning-card  variant="Narrow"  title="hariom 9 dec record form " icon-name="standard:account">
+    
+
+    <lightning-record-form title="Record form 9Dec" record-id = {recordId} 
+                            object-api-name={objectApiName} 
+                            fields={fields} 
+                            mode="edit"
+                            column="2"
+                            onsubmit={handleSubmit}
+    >
+
+    </lightning-record-form>
+
+
+    <lightning-record-view-form title="Record View Form data 9dec"
+                record-id={recordId}
+                object-api-name={objectApiName}>
+        <div class="slds-box slds-theme_default">
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Phone"></lightning-output-field>
+           
+           
+        </div>
+    </lightning-record-view-form>
+</lightning-card>
+</template>

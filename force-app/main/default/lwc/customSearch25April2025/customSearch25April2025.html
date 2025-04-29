@@ -1,0 +1,47 @@
+<template>
+    
+    <lightning-card title="Custom Search 25 April 2025" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Search" value={searchContactValue}></lightning-input>
+            <lightning-button label="Search Contact" onclick={handleContactSearch}></lightning-button>
+        </div>
+        <template if:true={contactsList}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="ID">Id</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="FirstName">FirstName</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="LastName">LastName</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Email">Email</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contactsList} for:item="contact">
+                        <tr key={contact.Id}>
+                            <td data-label="Id">
+                                <div class="slds-truncate" title={contact.Id}>{contact.Id}</div>
+                            </td>
+                            <td data-label="FirstName">
+                                <div class="slds-truncate" title={contact.FirstName}>{contact.FirstName}</div>
+                            </td>
+                            <td data-label="LastName">
+                                <div class="slds-truncate" title={contact.LastName}>{contact.LastName}</div>
+                            </td>
+                            <td data-label="Email">
+                                <div class="slds-truncate" title={contact.Email}>{contact.Email}</div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+    </lightning-card> 
+</template>
